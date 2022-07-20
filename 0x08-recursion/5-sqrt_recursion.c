@@ -8,17 +8,17 @@
  */
 int _sqrt_recursion(int n)
 {
-	return (_sqrt_help(n, 1));
+	return (sqrt_help(n, 1));
 }
 
 /**
- * _sqrt_help - helper function to solve _sqrt_recursion
+ * sqrt_help - helper function to solve _sqrt_recursion
  * @num: number to determine if square root
  * @i: incrementer to compare against num
  * Return: square root if natural square root, or -1 if none found
  */
 
-int _sqrt_help(int num, int i)
+int sqrt_help(int num, int i)
 {
 	int square;
 
@@ -29,7 +29,7 @@ int _sqrt_help(int num, int i)
 	}
 	if (square < num)
 	{
-		return (_sqrt_help(num, i + 1));
+		return (sqrt_help(num, i + 1));
 	}
 	if (square > num)
 	{
