@@ -35,4 +35,5 @@ int sqrt_help(int num, int i)
 	{
 		return (-1);
 	}
+	return (0);
 }
