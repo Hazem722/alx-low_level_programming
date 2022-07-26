@@ -21,8 +21,8 @@ int word_counter(char *s)
 			f = 1;
 			wnbr++;
 		}
-	return (wnbr);
 	}
+	return (wnbr);
 }
 
 /**
