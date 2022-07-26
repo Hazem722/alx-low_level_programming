@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	unsigned int i, j, k;
+	unsigned int i, k;
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	s[i] = '\0';
-	*s = malloc(sizeof(char) * i);
+	s = malloc(sizeof(char) * i);
 	if (s == NULL)
 		return (NULL);
 	return (s);
