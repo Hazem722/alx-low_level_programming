@@ -13,12 +13,14 @@ int word_counter(char *s)
 	f = 0;
 	wnbr = 0;
 	for (i = 0; s[i] != '\0'; i++)
-		f = 0;
-	else if (f == 0)
 	{
-		f = 1;
-		wnbr++;
-	}
+		if (s[c] == ' ')
+			f = 0;
+		else if (f == 0)
+		{
+			f = 1;
+			wnbr++;
+		}
 	return (wnbr);
 }
 
