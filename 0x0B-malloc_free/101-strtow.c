@@ -22,6 +22,7 @@ int word_counter(char *s)
 			wnbr++;
 		}
 	return (wnbr);
+	}
 }
 
 /**
