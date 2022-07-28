@@ -42,6 +42,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			fusion[k] = s2[l++];
 		}
 	}
-	fusion[sl1 + myByte + 1] = '\0';
 	return (fusion);
 }
