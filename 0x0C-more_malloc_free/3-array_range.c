@@ -10,13 +10,13 @@
 int *array_range(int min, int max)
 {
 	int *a = NULL;
-	unsigned int i = 0, range;
+	int i = 0;
+	int range = (max - min) + 1; 
 
 	if (min > max)
 		return (NULL);
-	range = max - min + 1;
 	a = malloc(sizeof(int) * range);
-	if (a == 0)
+	if (a == NULL)
 		return (NULL);
 	while (i < range)
 	{
