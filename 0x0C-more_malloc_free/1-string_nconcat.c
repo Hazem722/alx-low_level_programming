@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (k = 0, l = 0; k < (sl1 + myByte + 1); k++)
 	{
-		if (k < i)
+		if (k < sl1)
 		{
 			fusion[k] = s1[k];
 		}
