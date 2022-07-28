@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	fusion = (char *)malloc(sizeof(char) * (sl1 + myByte + 1));
 	if (fusion == 0)
 		return (NULL);
-	for (k = 0, l = 0; k < (i + myByte + 1); k++)
+	for (k = 0, l = 0; k < (sl1 + myByte + 1); k++)
 	{
 		if (k < i)
 		{
@@ -42,6 +42,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			fusion[k] = s2[l++];
 		}
 	}
-	fusion[i + myByte + 1] = '\0';
+	fusion[sl1 + myByte + 1] = '\0';
 	return (fusion);
 }
