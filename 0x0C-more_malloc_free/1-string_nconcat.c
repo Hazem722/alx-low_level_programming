@@ -12,8 +12,9 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	char *fusion = NULL;
 	unsigned int i, j, k, l;
-	char *fusion;
+	unsigned int myByte = n;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -26,32 +27,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	j++;
 	if (n >= j)
-	{
-		fusion = malloc(sizeof(char) * (i + j + 1));
-	} else
-	{
-		fusion = malloc(sizeof(char) * (i + n + 1));
-	}
+		myByte = j;
+	fusion = malloc(sizeof(char) * (i + myByte + 1));
 	if (fusion == 0)
 		return (NULL);
 	for (k = 0; k < i; k++)
 	{
 		fusion[k] = s1[k];
 	}
-	if (n >= j)
+	for (l = 0; l < myByte; l++)
 	{
-		for (l = 0; l < j; l++)
-		{
-			fusion[i + l] = s2[l];
-		}
-		fusion[i + l] = '\0';
-	} else
-	{
-		for (l = 0; l < n; l++)
-		{
-			fusion[i + l] = s2[l];
-		}
-		fusion[i + l] = '\0';
+		fusion[i + l] = s2[l];
 	}
+	fusion[i + l] = '\0';
 	return (fusion);
 }
