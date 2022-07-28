@@ -27,10 +27,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	j++;
 	if (n >= j)
 	{
-		fusion = malloc(sizeof(char) * (i + j) + 1);
+		fusion = malloc(sizeof(char) * (i + j + 1));
 	} else
 	{
-		fusion = malloc(sizeof(char) * (i + n) + 1);
+		fusion = malloc(sizeof(char) * (i + n + 1));
 	}
 	if (fusion == 0)
 		return (NULL);
