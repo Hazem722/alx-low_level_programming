@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		sl2 += 1;
 	if (n >= sl2)
 		myByte = sl2;
-	fusion = (char *)malloc(sizeof(char) * (i + myByte + 1));
+	fusion = (char *)malloc(sizeof(char) * (sl1 + myByte + 1));
 	if (fusion == 0)
 		return (NULL);
 	for (k = 0, l = 0; k < (i + myByte + 1); k++)
