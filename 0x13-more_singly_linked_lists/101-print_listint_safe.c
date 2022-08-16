@@ -9,10 +9,12 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
+	const listint_t *current;
 	size_t num = 0;
 	long int diff;
 
-	if (!head)
+	current = head;
+	if (current == NULL)
 		exit(98);
 	while (head)
 	{
