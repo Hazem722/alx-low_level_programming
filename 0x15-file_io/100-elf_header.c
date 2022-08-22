@@ -8,9 +8,9 @@ void ptitle(char *title);
 * @msg: the error msg
 * Return: void
 */
-
 void errors(char *msg)
 {
+	/* declarations */
 	int len;
 
 	/* writing the error */
@@ -19,7 +19,6 @@ void errors(char *msg)
 	write(STDERR_FILENO, msg, len);
 	exit(98);
 }
-
 /**
   * ptype - prints type
   *
@@ -29,7 +28,7 @@ void errors(char *msg)
 void ptype(char *buffer)
 {
 	ptitle("Type");
-	switch (buffer[6])
+switch (buffer[6])
 	{
 		case ET_NONE:
 			printf("NONE (None)");
@@ -51,27 +50,35 @@ void ptype(char *buffer)
 		break;
 	}
 	printf("\n");
+
 }
 /**
 * pABIversion - prints the ABI version
 * @buffer: contains the ABI version
+*
 * Return: void
 */
 void pABIversion(char *buffer)
 {
+	/*handling the ABI set */
 	ptitle("ABI Version");
+
 	printf("%d", buffer[8]);
+
 	printf("\n");
 }
 
 /**
  * pentry - prints the ELF entry point address
+ *
  */
+
 void pentry(void)
 {
 	Elf64_Ehdr h;
 	int i = 0, len = 0;
 	unsigned char *p = (unsigned char *)&h.e_entry;
+
 
 	printf("  Entry point address:               0x");
 	if (h.e_ident[EI_DATA] == ELFDATA2MSB)
@@ -100,11 +107,14 @@ void pentry(void)
 /**
 * pos - printing the os/abi
 * @buffer: contains os/abi info
+*
 * Return: void
 */
 void pos(char *buffer)
 {
+	/* handling the OS ABI set */
 	ptitle("OS/ABI");
+
 	switch (buffer[7])
 	{
 		case ELFOSABI_SYSV:
@@ -136,15 +146,17 @@ void pos(char *buffer)
 	}
 	printf("\n");
 }
-
 /**
 * pversion- printing version
 * @buffer: contains version
+*
 * Return: void
 */
 void pversion(char *buffer)
 {
+	/* handling the version set */
 	ptitle("Version");
+
 	switch (buffer[6])
 	{
 		case EV_NONE:
@@ -156,17 +168,20 @@ void pversion(char *buffer)
 		default:
 			printf("%d <unknown: %%lx>", (int)buffer[6]);
 	}
+
 	printf("\n");
 }
-
 /**
 * pdata - printing the data handling
 * @buffer: contains data handling info
+*
 * Return: void
 */
 void pdata(char *buffer)
 {
+	/* handling the data set */
 	ptitle("Data");
+
 	switch (buffer[5])
 	{
 		case ELFDATANONE:
@@ -181,16 +196,18 @@ void pdata(char *buffer)
 		default:
 			printf("<unknown: %x>", (unsigned int)buffer[5]);
 	}
+
 	printf("\n");
 }
-
 /**
 * pmagic - printing the Magic we need
 * @buffer: contains magic
+*
 * Return: void
 */
 void pmagic(char *buffer)
 {
+	/* declarations */
 	int i;
 
 	/* handling the magics */
@@ -202,12 +219,14 @@ void pmagic(char *buffer)
 /**
 * pclass - printing the class, in class
 * @buffer: the buffer containing class or none
+*
 * Return: void
 */
 void pclass(char *buffer)
 {
 	/*handling the class */
 	ptitle("Class");
+
 	switch (buffer[4])
 	{
 		case ELFCLASSNONE:
@@ -227,6 +246,7 @@ void pclass(char *buffer)
 /**
 * ptitle - printing titles since 2020
 * @title: the title
+*
 * Return: void
 */
 void ptitle(char *title)
@@ -248,8 +268,10 @@ void ptitle(char *title)
 * main - print a ELF header and such
 * @argc: count of args
 * @argv: vector of args
+*
 * Return: int or exit code
 */
+
 int main(int argc, char **argv)
 {
 	/* declarations */
@@ -287,5 +309,7 @@ int main(int argc, char **argv)
 	/* close and check for close */
 	if (close(fd))
 		errors("Could not close the file");
+
+
 	return (0);
 }
