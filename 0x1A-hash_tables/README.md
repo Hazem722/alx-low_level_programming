@@ -117,6 +117,8 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./a
 julien@ubuntu:~/0x1A. Hash tables$
 ```
 
+**Solution:** [0-hash_table_create.c](https://github.com/Hazem722/alx-low_level_programming/blob/67e110912fe78cf9c08581d0682e00a2a7d23688/0x1A-hash_tables/0-hash_table_create.c)
+
 
 ### 1. djb2
 
@@ -171,7 +173,9 @@ julien@ubuntu:~/0x1A. Hash tables$
 
 ```
 
-2. key -> index
+**Solution:** [1-djb2.c](https://github.com/Hazem722/alx-low_level_programming/blob/67e110912fe78cf9c08581d0682e00a2a7d23688/0x1A-hash_tables/1-djb2.c)
+
+### 2. key -> index
 
 Write a function that gives you the index of a key.
 
@@ -221,6 +225,8 @@ julien@ubuntu:~/0x1A. Hash tables$ ./c
 julien@ubuntu:~/0x1A. Hash tables$
 ```
 
+**Solution:** [2-key_index.c](https://github.com/Hazem722/alx-low_level_programming/blob/67e110912fe78cf9c08581d0682e00a2a7d23688/0x1A-hash_tables/2-key_index.c)
+
 ### 3. >>> ht['betty'] = 'cool'
 
 Write a function that adds an element to the hash table.
@@ -263,6 +269,8 @@ If you want to test for collisions, here are some strings that collide using the
 * joyful collides with synaphea
 * redescribed collides with urites
 * dram collides with vivency
+
+**Solution:** [3-hash_table_set.c](https://github.com/Hazem722/alx-low_level_programming/blob/67e110912fe78cf9c08581d0682e00a2a7d23688/0x1A-hash_tables/3-hash_table_set.c)
 
 ### 4. >>> ht['betty']
 
@@ -330,6 +338,8 @@ javascript:(null)
 julien@ubuntu:~/0x1A. Hash tables$
 ```
 
+**Solution:** [4-hash_table_get.c](https://github.com/Hazem722/alx-low_level_programming/blob/67e110912fe78cf9c08581d0682e00a2a7d23688/0x1A-hash_tables/4-hash_table_get.c)
+
 ### 5. >>> print(ht)
 
 Write a function that prints a hash table.
@@ -374,6 +384,8 @@ julien@ubuntu:~/0x1A. Hash tables$ ./f
 {'Betty': 'Cool', 'python': 'awesome', 'Bob': 'and Kris love asm', '98': 'Battery Street', 'N': 'queens', 'c': 'fun', 'Asterix': 'Obelix'}
 julien@ubuntu:~/0x1A. Hash tables$
 ```
+
+**Solution:** [5-hash_table_print.c](https://github.com/Hazem722/alx-low_level_programming/blob/67e110912fe78cf9c08581d0682e00a2a7d23688/0x1A-hash_tables/5-hash_table_print.c)
 
 ### 6. >>> del ht
 
@@ -443,6 +455,8 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./g
 ==6621== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 julien@ubuntu:~/0x1A. Hash tables$
 ```
+
+**Solution:** [6-hash_table_delete.c](https://github.com/Hazem722/alx-low_level_programming/blob/67e110912fe78cf9c08581d0682e00a2a7d23688/0x1A-hash_tables/6-hash_table_delete.c)
 
 ### 7. $ht['Betty'] = 'Cool'
 
@@ -557,3 +571,5 @@ julien@ubuntu:~/0x1A. Hash tables$ ./sht
 julien@ubuntu:~/0x1A. Hash tables$
 
 ```
+
+**Solution:** [100-sorted_hash_table.c](https://github.com/Hazem722/alx-low_level_programming/blob/67e110912fe78cf9c08581d0682e00a2a7d23688/0x1A-hash_tables/100-sorted_hash_table.c)
